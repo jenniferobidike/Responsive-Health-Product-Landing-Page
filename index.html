@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Jenny's Landing Page</title>
+       <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="sect">
+            <header>
+                <a href="#"><img src="logo.png" alt="logo" class="logo"></a>
+                <div class="toggleBtn" onclick="menuToggle();"></div>
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="https://besthealthaids.com/" target="_blank">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">What's New</a></li>
+                        <li><a href="https://besthealthaids.com/" target="_blank">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                    
+                </nav>
+            </header>
+            <div class="content">
+                <div class="textbox">
+                    <h2>Monitoring Your Daily <span>Health</span></h2>
+                    <p>Health aids watch monitors your blood pressure, oxygen level and heart rate. It supports walking, running, cycling, skiping, badminton, basketball, football, and swimming. 
+                        Built with premuim metal alloy, touch screen, and  a long lasting battery. Hover over watch icons to see the designs available!</p>
+      
+                    <a href="#">Shop Now</a>
+                    
+                </div>
+                <div class="imagebox">
+                    <img src="pink watch.png" alt="pink design" class="watch"/>
+
+                </div>
+            </div>
+            <ul class="thumbs">
+                <li><img src="pink watch.png" alt="pink design" onmouseover="imgSlider('pink watch.png');changeBgColor('#ff99a8')"></li>
+                <li><img src="black watch.png" alt="black design" onmouseover="imgSlider('black watch.png');changeBgColor('#000000')"></li>
+                <li><img src="grey watch.png" alt="grey design" onmouseover="imgSlider('grey watch.png');changeBgColor('#e9f3fb')"></li>
+                <li><img src="white watch.png" alt="white design" onmouseover="imgSlider('white watch.png');changeBgColor('#fff')"></li>
+            </ul>
+            <ul class="socials">
+                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                <li><a href="https://web.facebook.com/besthealthaids" target="_blank"><span class="fa fa-facebook-f"></span></a></li>
+                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(popup){
+                document.querySelector('.watch').src = popup;
+            }
+
+            function changeBgColor(color){
+                const sect = document.querySelector('.sect');
+                sect.style.background = color;
+            }
+
+            function menuToggle() 
+            {
+                const toggleBtn = document.querySelector('.toggleBtn');
+                const navigation = document.querySelector('.navigation');
+                toggleBtn.classList.toggle('active')
+                navigation.classList.toggle('active')
+            }
+        </script>
+    </body>
+</html> 
